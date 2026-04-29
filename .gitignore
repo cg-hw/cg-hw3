@@ -1,0 +1,12 @@
+*.png
+*.jpg
+*.jpeg
+
+# input_model and test scripts
+input_model/
+
+# python cache
+__pycache__/
+
+# gradio encrypt key
+.gradio/
