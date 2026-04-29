@@ -103,7 +103,7 @@ Output: (B, 3, H·s, W·s)  ← Upscaled RGB
 
 | Shader | 詳細資訊 (Details) |
 |---|---|
-| **Vertex** | 透過 `u_model × u_view × u_proj` 轉換 vertices，並傳遞 world position, normal, UV |
+| **Vertex** | 透過 `u_model u_view u_proj` 轉換 vertices，並傳遞 world position, normal, UV |
 | **Fragment** | Blinn-Phong lighting，對環境的光線設計依使用者而定。Texture 透過 `u_use_texture` 切換來 sampling |
 
 
