@@ -104,7 +104,7 @@ Output: (B, 3, H·s, W·s)  ← Upscaled RGB
 | Shader | 詳細資訊 (Details) |
 |---|---|
 | **Vertex** | 透過 `u_model × u_view × u_proj` 轉換 vertices，並傳遞 world position, normal, UV |
-| **Fragment** | 具有 **directional sunlight** `(0.5, 1.0, 0.3)` 的 Blinn-Phong。Ambient=0.5, Diffuse=0.6, Specular=0.1。Texture 透過 `u_use_texture` 切換來 sampling |
+| **Fragment** | Blinn-Phong lighting，對環境的光線設計依使用者而定。Texture 透過 `u_use_texture` 切換來 sampling |
 
 
 ## 訓練流程細節 (Training Pipeline Detail)
