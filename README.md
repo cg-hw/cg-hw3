@@ -93,7 +93,7 @@ Output: (B, 3, H·s, W·s)  ← Upscaled RGB
 |---|---|
 | `ESPCN(scale_factor, in_channels=4)` | 具備 sub-pixel convolution 的 PyTorch model |
 | `AIUpscaler.load_weights(path)` | 從 checkpoint tensor 的形狀自動偵測 scale factor；如果 scale 不符，會重建 model |
-| `AIUpscaler.train_step(hr, hr_d, ..., lr_colors, lr_depths)` | 使用 **原生算繪的** LR/HR 配對進行訓練（消除 bicubic domain gap）。Loss = MSE (可以客製化) |
+| `AIUpscaler.train_step(hr, hr_d, ..., lr_colors, lr_depths)` | 使用 **原生算繪的** LR/HR 配對進行訓練。Loss = MSE (可以客製化) |
 | `AIUpscaler.upscale(color, depth)` | Inference：串接 RGB+depth，執行 ESPCN，回傳 float32 numpy |
 | `AIUpscaler.upscale_bilinear(color)` | Baseline：PIL bilinear resize |
 
