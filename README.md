@@ -35,7 +35,6 @@ graph TD
 
 ```
 ├── app.py                          # Gradio web app, JS↔Python bridge
-├── metrics.py                      # PSNR / SSIM evaluation utilities
 ├── pipeline/
 │   ├── camera/Camera.py            # View & projection matrix generation
 │   ├── model/dlss_model.py         # ESPCN model, AIUpscaler wrapper
@@ -107,14 +106,6 @@ Output: (B, 3, H·s, W·s)  ← Upscaled RGB
 | **Vertex** | 透過 `u_model × u_view × u_proj` 轉換 vertices，並傳遞 world position, normal, UV |
 | **Fragment** | 具有 **directional sunlight** `(0.5, 1.0, 0.3)` 的 Blinn-Phong。Ambient=0.5, Diffuse=0.6, Specular=0.1。Texture 透過 `u_use_texture` 切換來 sampling |
 
-### 5. Metrics (`metrics.py`)
-
-| 函式 (Function) | 描述 (Description) |
-|---|---|
-| `psnr(img1, img2)` | Peak Signal-to-Noise Ratio (dB) (峰值信噪比) |
-| `ssim(img1, img2)` | Structural Similarity Index (結構相似性指標，若可用則使用 scikit-image) |
-| `compute_metrics(upscaled, gt)` | 回傳 `{"psnr": float, "ssim": float}` |
-| `save_comparison(lr, espcn, bilinear, gt)` | 產生帶有 metrics 覆蓋的 2×2 比較網格 PIL image |
 
 ## 訓練流程細節 (Training Pipeline Detail)
 
