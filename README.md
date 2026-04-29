@@ -158,7 +158,7 @@ sequenceDiagram
     M-->>Gradio: (bilinear_pil, espcn_pil, status)
 ```
 
-## 安裝與執行 (Setup)
+## 安裝與執行
 
 ```bash
 conda env create -f environment.yml
@@ -168,5 +168,8 @@ python app.py
 
 應用程式將會在 `http://127.0.0.1:8000` 啟動，並附帶 Gradio share link。
 
+## 注意事項
 - macOS需要下載torch cpu only版本，詳細查看environment.yml
+- low-resolution: 256×256
+- default_scene裡面是預設給予的一組場景，若是要自己找場景或其他3D model，可以去sketchfab(https://sketchfab.com/)查詢，種類比較多元。
 
