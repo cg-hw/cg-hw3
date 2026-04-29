@@ -171,5 +171,5 @@ python app.py
 ## 注意事項
 - macOS需要下載torch cpu only版本，詳細查看environment.yml
 - low-resolution: 256×256
-- default_scene裡面是預設給予的一組場景，若是要自己找場景或其他3D model，可以去sketchfab(https://sketchfab.com/)查詢，種類比較多元。
+- default_scene裡面是預設給予的一組場景，若是要自己找場景或其他3D model，可以去sketchfab(https://sketchfab.com/)
 
